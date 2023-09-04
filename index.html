@@ -18,11 +18,14 @@
 
             // Check if the input is a valid number
             if (!isNaN(heightInches)) {
-                // Calculate the result
-                const result = heightInches / 54;
-
-                // Display the result
-                document.getElementById("result").textContent = `You are ${result} times taller/shorter than Drake.`;
+                if (heightInches < 54) {
+                    // Display a message for shorter height
+                    document.getElementById("result").textContent = `You are shorter than 54 inches.`;
+                } else {
+                    // Calculate the result and display the message
+                    const result = heightInches / 54;
+                    document.getElementById("result").textContent = `You are ${result} times taller then Drake`;
+                }
             } else {
                 // Display an error message if the input is not a valid number
                 document.getElementById("result").textContent = "Please enter a valid number.";
