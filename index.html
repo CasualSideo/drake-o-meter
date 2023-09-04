@@ -11,7 +11,7 @@
     <p>Result:</p>
     <p id="result"></p>
 
-    <script>
+  <script>
         function calculateHeight() {
             // Get the input value
             const heightInches = parseFloat(document.getElementById("heightInput").value);
@@ -19,12 +19,13 @@
             // Check if the input is a valid number
             if (!isNaN(heightInches)) {
                 if (heightInches < 54) {
-                    // Display a message for shorter height
-                    document.getElementById("result").textContent = `You are shorter than 54 inches.`;
+                    // Calculate how many times shorter and display the message
+                    const timesShorter = 54 / heightInches;
+                    document.getElementById("result").textContent = `You are ${timesShorter.toFixed(2)} shorter then Drake.`;
                 } else {
                     // Calculate the result and display the message
                     const result = heightInches / 54;
-                    document.getElementById("result").textContent = `You are ${result} times taller then Drake`;
+                    document.getElementById("result").textContent = `You are ${result.toFixed(2)} taller then Drake`;
                 }
             } else {
                 // Display an error message if the input is not a valid number
