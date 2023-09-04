@@ -21,11 +21,11 @@
                 if (heightInches < 54) {
                     // Calculate how many times shorter and display the message
                     const timesShorter = 54 / heightInches;
-                    document.getElementById("result").textContent = `You are ${timesShorter.toFixed(2)} shorter then Drake.`;
+                    document.getElementById("result").textContent = `You are ${timesShorter.toFixed(2)} times shorter then Drake.`;
                 } else {
                     // Calculate the result and display the message
                     const result = heightInches / 54;
-                    document.getElementById("result").textContent = `You are ${result.toFixed(2)} taller then Drake`;
+                    document.getElementById("result").textContent = `You are ${result.toFixed(2)} times taller then Drake`;
                 }
             } else {
                 // Display an error message if the input is not a valid number
