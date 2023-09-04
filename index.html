@@ -1,16 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Drake-O-meter</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <h1>Drake-O-Meter</h1>
-  <p>Have you ever wondered how tall you are compared to Drake Woods? Well now you can, with our patented "Drake-O-Meter"!</p>
-  
-  <body>
-	<script src="index.js"></script>
-  </body>
+<html>
+<head>
+    <title>Drake-O-Meter</title>
+</head>
+<body>
+    <h1>Drake-O-Meter</h1>
+    <p>Enter your height in inches:</p>
+    <input type="number" id="heightInput" placeholder="Enter height in inches">
+    <button onclick="calculateHeight()">Calculate</button>
+    <p>Result:</p>
+    <p id="result"></p>
+
+    <script>
+        function calculateHeight() {
+            // Get the input value
+            const heightInches = parseFloat(document.getElementById("heightInput").value);
+
+            // Check if the input is a valid number
+            if (!isNaN(heightInches)) {
+                // Calculate the result
+                const result = heightInches / 54;
+
+                // Display the result
+                document.getElementById("result").textContent = `Height divided by 54 is: ${result}`;
+            } else {
+                // Display an error message if the input is not a valid number
+                document.getElementById("result").textContent = "Please enter a valid number.";
+            }
+        }
+    </script>
+</body>
 </html>
