@@ -23,13 +23,13 @@ body {
 
             // Check if the input is a valid number
             if (!isNaN(heightInches)) {
-                if (heightInches < 54) {
+                if (heightInches < 59) {
                     // Calculate how many times shorter and display the message
-                    const timesShorter = 54 / heightInches;
+                    const timesShorter = 59 / heightInches;
                     document.getElementById("result").textContent = `You are Drake Woods`;
                 } else {
                     // Calculate the result and display the message
-                    const result = heightInches / 54;
+                    const result = heightInches / 59;
                     document.getElementById("result").textContent = `You are ${result.toFixed(2)} times taller then Drake`;
                 }
             } else {
